@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2021-10-28T05:51:38.918Z" agent="5.0 (Windows)" etag="m8EAvSKQfNF-AgOja-2z" version="15.6.1" type="github">
+  <diagram id="cIE1P4EtiyrVIo8f43hG" name="Page-1">
+    <mxGraphModel dx="2062" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rlAGqI6mmZ9XpBbU1IBu-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="vg5ZJ7LDzbAf4cRa0NlI-1" target="rlAGqI6mmZ9XpBbU1IBu-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vg5ZJ7LDzbAf4cRa0NlI-1" value="Home / Login" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vg5ZJ7LDzbAf4cRa0NlI-2" value="Generate Tracks" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="125" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vg5ZJ7LDzbAf4cRa0NlI-3" value="Generate Artists" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vg5ZJ7LDzbAf4cRa0NlI-5" value="Generate Albums" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="455" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rlAGqI6mmZ9XpBbU1IBu-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rlAGqI6mmZ9XpBbU1IBu-1" target="vg5ZJ7LDzbAf4cRa0NlI-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rlAGqI6mmZ9XpBbU1IBu-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rlAGqI6mmZ9XpBbU1IBu-1" target="vg5ZJ7LDzbAf4cRa0NlI-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rlAGqI6mmZ9XpBbU1IBu-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rlAGqI6mmZ9XpBbU1IBu-1" target="vg5ZJ7LDzbAf4cRa0NlI-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rlAGqI6mmZ9XpBbU1IBu-1" value="&lt;div&gt;Select&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

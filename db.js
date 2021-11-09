@@ -1,37 +1,20 @@
 // 1ST DRAFT DATA MODEL
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-// users
-// * our site requires authentication...
-// * so users have a username and password
-// * they also can have 0 or more lists
+// Users
 const User = new mongoose.Schema({
-  // username provided by authentication plugin
-  // password hash provided by authentication plugin
-  lists:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'List' }]
+  tracks: [String], // array of tracks
+  artists: [String], // array of artists
 });
 
-// an item (or group of the same items) in a grocery list
-// * includes the quantity of this item (multiple of the same item does not 
-//   require additional Item documents; just increase the quantity!)
-// * items in a list can be crossed off
-const Item = new mongoose.Schema({
-  name: {type: String, required: true},
-  quantity: {type: Number, min: 1, required: true},
-  checked: {type: Boolean, default: false, required: true}
-}, {
-  _id: true
-});
-
-// a grocery list
-// * each list must have a related user
-// * a list can have 0 or more items
-const List = new mongoose.Schema({
-  user: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
-  name: {type: String, required: true},
-  createdAt: {type: Date, required: true},
-  items: [Item]
+// Tracks
+const Track = new mongoose.Schema({
+  artist: String,
+  name: String,
 });
 
 // TODO: add remainder of setup for slugs, connection, registering models, etc. below
-
+mongoose.model("User", User);
+mongoose.model("Track", Track);
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }); // Production
+// mongoose.connect("mongodb://localhost/final-proj"); // Local
