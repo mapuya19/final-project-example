@@ -19,15 +19,16 @@ function ExampleThing({ homeToThing }) {
 
   function getUser() {
     axios
-      .get("http://localhost:8000/Home", { crossdomain: true })
+      .get("http://localhost:8000/api/Home", { crossdomain: true })
       .then((res) => {
         setToken(res.data.token);
+        // console.log(res.data.token);
       });
   }
 
   function sendUser() {
     axios
-      .post("http://localhost:8000/Home", qs.stringify(homeToThing.token))
+      .post("http://localhost:8000/api/Home", qs.stringify(homeToThing.token))
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 

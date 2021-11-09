@@ -12,8 +12,7 @@ const User = mongoose.model("User");
 const Track = mongoose.model("Track");
 
 const port = process.env.PORT || 5000;
-const clientSec =
-  process.env.CLIENT_S || "40e30d5d0cf44013aeb69b314f7de079";
+const clientSec = process.env.CLIENT_S || "40e30d5d0cf44013aeb69b314f7de079";
 
 // enable sessions
 const session = require("express-session");
@@ -51,11 +50,11 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.redirect("Home");
+app.get("/api/", (req, res) => {
+  res.redirect("/api/Home/");
 });
 
-app.get("/Home", (req, res) => {
+app.get("/api/Home", (req, res) => {
   let testUser;
 
   if (spotifyThing !== "") {
@@ -72,11 +71,11 @@ app.get("/Home", (req, res) => {
   res.send(jsonSend);
 });
 
-app.post("/Home", (req, res) => {
+app.post("/api/Home/", (req, res) => {
   spotifyThing = req.body.value;
 });
 
-app.get("/Tracks", (req, res) => {
+app.get("/api/Tracks/", (req, res) => {
   if (spotifyThing !== "") {
     spotifyApi.getMyTopTracks().then(
       function (data) {
@@ -109,7 +108,7 @@ app.get("/Tracks", (req, res) => {
   }
 });
 
-app.get("/ClearAll", (req, res) => {
+app.get("/api/ClearAll/", (req, res) => {
   Track.deleteMany()
     .then(function () {
       console.log("Data deleted"); // Success
@@ -124,8 +123,9 @@ app.get("/ClearAll", (req, res) => {
 //   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 // });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build/index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
 
-app.listen(port, () => console.log("server is up"));
+app.listen(port, () => console.log("server is up")); // Production
+// app.listen(8000, () => console.log("server is up")); // Local
