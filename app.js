@@ -120,8 +120,12 @@ app.get("/ClearAll", (req, res) => {
 });
 
 // Serve React
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// });
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build/index.html'));
 });
 
 app.listen(port, () => console.log("server is up"));
