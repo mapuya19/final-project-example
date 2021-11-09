@@ -20,7 +20,7 @@ function ClearAll() {
 
   function clear() {
     axios
-      .get("http://localhost:8000/api/ClearAll", { crossdomain: true })
+      .get("https://spotify-notes.herokuapp.com/api/ClearAll", { crossdomain: true })
       .then((res) => {
         console.log("cleared");
       });

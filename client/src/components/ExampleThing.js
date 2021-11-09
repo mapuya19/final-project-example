@@ -19,7 +19,7 @@ function ExampleThing({ homeToThing }) {
 
   function getUser() {
     axios
-      .get("http://localhost:8000/api/Home", { crossdomain: true })
+      .get("https://spotify-notes.herokuapp.com/api/Home", { crossdomain: true })
       .then((res) => {
         setToken(res.data.token);
         // console.log(res.data.token);
@@ -28,7 +28,7 @@ function ExampleThing({ homeToThing }) {
 
   function sendUser() {
     axios
-      .post("http://localhost:8000/api/Home", qs.stringify(homeToThing.token))
+      .post("https://spotify-notes.herokuapp.com/api/Home", qs.stringify(homeToThing.token))
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 

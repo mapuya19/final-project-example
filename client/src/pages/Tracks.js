@@ -24,7 +24,7 @@ function Tracks() {
 
   function getTracks() {
     axios
-      .get("http://localhost:8000/api/Tracks", { crossdomain: true })
+      .get("https://spotify-notes.herokuapp.com/api/Tracks", { crossdomain: true })
       .then((res) => {
         setArtistObjs(res.data);
 
