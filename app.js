@@ -10,6 +10,7 @@ const SpotifyWebApi = require("spotify-web-api-node");
 const mongoose = require("mongoose");
 const User = mongoose.model("User");
 const Track = mongoose.model("Track");
+const Artist = mongoose.model("Artist");
 
 const port = process.env.PORT || 5000;
 const clientSec = process.env.CLIENT_S || "40e30d5d0cf44013aeb69b314f7de079";
@@ -100,6 +101,39 @@ app.get("/api/Tracks/", (req, res) => {
         });
 
         res.send(slimTracks);
+      },
+      function (err) {
+        console.log("Something went wrong!", err);
+      }
+    );
+  }
+});
+
+app.get("/api/Artists/", (req, res) => {
+  if (spotifyThing !== "") {
+    spotifyApi.getMyTopArtists().then(
+      function (data) {
+        let topArtists = data.body.items;
+        let slimArtists = topArtists.map((index) => ({
+          name: index.name,
+          genre: index.genres[0],
+        }));
+
+        slimArtists.forEach((object) => {
+          new Artist({
+            name: object.name,
+            genre: object.genre,
+          })
+            .save()
+            .then((item) => {
+              // res.send("item saved to database"); continue
+            })
+            .catch((err) => {
+              res.status(400).send("unable to save to database");
+            });
+        });
+
+        res.send(slimArtists);
       },
       function (err) {
         console.log("Something went wrong!", err);
