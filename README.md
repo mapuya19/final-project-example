@@ -1,9 +1,9 @@
 # Spotify Notes
 
 ## Overview
-This project initially started out as a different version of Receiptify. However, I quickly realized the scope of that was out of my reach. In it's current state, it pulls Top Trracks and Artists from Spotify Web API and displays them on a Material UI table. 
+This project initially started out as a spin-off of Receiptify. However, I quickly realized the scope was out of my reach. In its current state, the site pulls a connected user's Top Tracks and Top Artists from Spotify Web API and displays them on a Material UI table. 
 
-I think I'll clean this up one day.
+This was the first React app I built from scratch without partners / teammates, so I'm satisfied with that.
 
 Top Artists                |  Top Tracks
 :-------------------------:|:-------------------------:
