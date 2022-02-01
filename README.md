@@ -5,6 +5,8 @@ This project initially started out as a spin-off of Receiptify. However, I quick
 
 This was the first React app I built from scratch without partners / teammates, so I'm satisfied with that.
 
+Please note some of the code / usability is a bit redundant / funky as I had to meet certain requirements for my class in regards to Ajax interactions.
+
 Top Artists                |  Top Tracks
 :-------------------------:|:-------------------------:
 <img src="https://user-images.githubusercontent.com/15944396/151920470-c759791f-bbcd-475a-9d1e-d86b5d9b3291.png" width="400">  |  <img src="https://user-images.githubusercontent.com/15944396/151920474-e769da90-dfb4-4856-84a0-7513b056c3ec.png" width="400">
